@@ -2,8 +2,7 @@
 This is an opinionated list of useful resources for data science.
 
 **Q:** I'm a beginner. Where do I go? <br>
-**A:** Learn Python and topics in the *Core Math* section below. You may want
-to listen to some of the podcasts in the *Other Resources* section as well.
+**A:** Learn Python and topics in the *Core Math* section below.
 
 **Q:** Do I need to know all of this stuff to be a data scientist?<br>
 **A:** No.
@@ -56,7 +55,8 @@ data". The data management tools described in the next section are almost
 exclusively programmed in Java or Scala.
 
 ### JavaScript
-The only language your web browser understands. Unrelated to Java.
+The only language your web browser understands. Used exclusively for
+data visualization. Unrelated to Java.
 - The [Mozilla Developer Network](https://developer.mozilla.org/en-US/) has
 documentation for JavaScript and other related web technologies such as
 (HTML and CSS).
@@ -75,9 +75,6 @@ to get started.
 [PyData](https://www.youtube.com/channel/UCOjD18EJYcsBog4IozkF_7w), and
 [SciPy](https://www.youtube.com/user/EnthoughtMedia/playlists) talks for more
 advanced stuff and to learn about new packages.
-- [NumPy](http://www.numpy.org/) and [SciPy](https://www.scipy.org/) for
-numerical math functions.
-- [SymPy](http://www.sympy.org/en/index.html) for symbolic math.
 
 ### [R](https://www.r-project.org/)
 A domain-specific language for statistics. Many of the Python packages I mention
@@ -164,13 +161,18 @@ about how those processes operate, make predictions about future data values,
 etc.
 ### Core Math
 Basically every branch of math is related to data analysis in some way,
-but of course some subjects are more widely-used than others. Here are the
-most important ones for a beginner to learn:
+but of course some subjects are more widely-used than others. When learning
+math, *do exercises*. You cannot be sure that you understand the material
+unless you do; it's *very easy* to trick yourself into thinking you understand
+something you don't.
 #### Calculus
 Understand partial derivatives and multiple integrals. Be able to take numerical
-integrals (using something like [SciPy](https://www.scipy.org/)). Differential
-equations may show up in advanced data science topics, but are not necessary
-for beginners.
+integrals (using something like [SciPy](https://www.scipy.org/)). Be able to
+"type math" using [LaTeX](https://faculty.math.illinois.edu/~hildebr/tex/latex-start.html).
+
+- [MIT Single Variable Calclus Lectures](https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1)
+- [MIT Multivariable Calclus Lecutures](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38)
+
 #### Linear Algebra
 Linear algebra comes in two flavors: "matrix algebra", which deals with arrays
 of numbers, and a more advanced, abstract type that builds on it. Matrix
@@ -189,7 +191,7 @@ Once you have a general form for a mathematical model (perhaps with some
 unspecified parameters), you'll then want to know how to nail down the best
 one. Any time you need to find the "best" thing, you have an optimization problem. Know what linear and convex optimization problems are, and why they're nice, basic iterative optimization algorithms, etc.
 - [Here](https://web.stanford.edu/~boyd/cvxbook/) is a free, popular book on
-convex optimization. This is probably overkill for most data scientists.
+convex optimization. This is overkill for most data scientists.
 
 #### Probability Theory
 There is always uncertainty in how to specify the data-generating process.
@@ -197,6 +199,8 @@ Probability is the way to translate uncertainty into mathematical language.
 Therefore, making good data models requires you to be familiar with expressing
 uncertainty using probability. Understand joint and conditional probability
 density functions, common distributions (especially the multivariate normal), the law of large numbers, the central limit theorem, etc. Measure theory is not required.
+- [Here](https://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/amsbook.mac.pdf) is a free book on basic probability theory. Doesn't cover
+multivariate distributions.
 
 ### Statistics
 Statisticians are the original data scientists. Related fields include
@@ -253,10 +257,10 @@ that, as its name implies, explores the relationship between Information (and
   Coding) theory and Bayesian machine learning.
 ___
 ## Software Engineering Practices
-It is common to hear of a recent physics or statistics graduate who decides
+It is common to hear of recent physics or statistics graduates who decide
 to move into data science, only to be assaulted with terms such as "production
-code", "unit tests", "logging", etc. that are essential for real developers but
-less relevant to researchers.
+code", "unit tests", "logging", etc. These concepts are essential for real
+developers but less relevant to researchers.
 ___
 ## Other Resources
 ### Staying Current
