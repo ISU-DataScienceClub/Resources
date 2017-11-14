@@ -1,8 +1,9 @@
 # Resources
 This is an opinionated list of useful resources for data science.
 
-**Q:** I'm a beginner. Where do I go? <br>
-**A:** Learn Python and topics in the *Core Math* section below.
+**Q:** I'm a beginner. Where do I go?<br>
+**A:** Learn basic Python and some of each of the topics in the *Core Math*
+section.
 
 **Q:** Do I need to know all of this stuff to be a data scientist?<br>
 **A:** No.
@@ -129,6 +130,8 @@ ___
 ## Data Visualization
 Data visualization is useful not only for presenting the results of an
 analysis, but also for exploring data before creating mathematical models.
+Advanced data visualization tends to bleed into front-end web development and
+computer graphics.
 ### Packages
 - [Matplotlib](http://matplotlib.org/) for simple plots guaranteed to work
 everywhere.
@@ -189,7 +192,10 @@ for visual, intuitive explanations of linear algebra concepts.
 #### Optimization/Mathematical Programming
 Once you have a general form for a mathematical model (perhaps with some
 unspecified parameters), you'll then want to know how to nail down the best
-one. Any time you need to find the "best" thing, you have an optimization problem. Know what linear and convex optimization problems are, and why they're nice, basic iterative optimization algorithms, etc.
+one. Any time you need to find the "best" thing, you have an optimization
+problem. Know what linear and convex optimization problems are, and why they're
+nice, basic iterative optimization algorithms, etc. This is the least important
+of the four core math topics listed here.
 - [Here](https://web.stanford.edu/~boyd/cvxbook/) is a free, popular book on
 convex optimization. This is overkill for most data scientists.
 
@@ -198,20 +204,61 @@ There is always uncertainty in how to specify the data-generating process.
 Probability is the way to translate uncertainty into mathematical language.
 Therefore, making good data models requires you to be familiar with expressing
 uncertainty using probability. Understand joint and conditional probability
-density functions, common distributions (especially the multivariate normal), the law of large numbers, the central limit theorem, etc. Measure theory is not required.
+density functions, common distributions (especially the multivariate normal),
+the law of large numbers, the central limit theorem, etc. If you see the phrase
+"measure theory", *run*.
 - [Here](https://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/amsbook.mac.pdf) is a free book on basic probability theory. Doesn't cover
 multivariate distributions.
 
 ### Statistics
 Statisticians are the original data scientists. Related fields include
 biometrics, econometrics, psychometrics, etc., which use the same fundamental
-tools but use different terminology.
-- Bayesian Statistics
-- Experimental Design
-- Hierarchical Models
-- Spatial Statistics
-- Survival Analysis
-- Time Series
+tools but use different terminology. Expect greater emphasis on interpretable
+results than in machine learning, and more attention to detail.
+
+
+#### Bayesian Statistics
+- [Bayesian Data Analysis](http://www.stat.columbia.edu/~gelman/book/) is the
+most common introduction to the field.
+- [Bayesian Nonparametrics](https://www.amazon.com/Nonparametrics-Cambridge-Statistical-Probabilistic-Mathematics/dp/0521513464) for more advanced Bayesian modeling.
+- [Stan](http://mc-stan.org/) is probably the most mature package for Bayesian
+modeling.
+
+#### Experimental Design
+The original application of statistics and the reason for the field's wide
+applicability and success. Focuses on methods for decomposing variation in data
+and relating it to different potential causes. Mandatory, to some degree, for
+those interested in getting scientifically valid results from controlled
+studies.
+- [Statistics for Experimenters](https://www.amazon.com/Statistics-Experimenters-Design-Innovation-Discovery/dp/0471718130).
+
+#### Spatial Statistics
+- Kriging
+
+#### Stochastic Processes
+The study of random functions. More a subfield of probability theory than part
+of statistics, but strongly related to time series and spatial statistics.
+Heavily used in finance and physics.
+
+#### Survival Analysis
+For modling time-until-event data. Time until a patient dies, a borrower
+defaults on a loan, a product breaks, etc.
+- [Statistical Methods for Reliability
+Data](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471143286.html),
+particularly for the engineering and quality control context.
+
+#### Time Series
+For when your data are related across time. Strongly related to stochastic
+processes.
+- [Time Series Analysis](https://www.amazon.com/Time-Analysis-James-Douglas-Hamilton/dp/0691042896) is a great intro- to mid-level reference for the field.
+- [Time Series: Theory and Methods](https://www.amazon.com/Time-Theory-Methods-Springer-Statistics/dp/1441903194), despite its name, is mostly theory. Expect heavy math.
+- Hidden Markov models
+
+#### Software
+R is much more popular than Python for classical statistics and has a more
+comprehensive package ecosystem.
+- [Statsmodels](http://www.statsmodels.org/stable/index.html) for classical
+statistics in Python.
 
 ### Machine Learning
 Machine learning, a branch of artificial intelligence, has been around since
@@ -220,37 +267,57 @@ analysis. *Statistical machine learning*, which is now by far the dominant
 variety, phrases "learning problems" in the context of data analysis. Like the
 \*metrics, expect a lot of similarities to statistics, but with differing
 focuses and terminology.
-- Unsupervised Learning
-- Supervised Learning
-- Reinforcement Learning
-- Recommender Systems
+#### "Standard" Machine Learning
+Not to be confused with Standard ML, the functional programming language.
 
-### Useful Packages
-- [Scikit-learn](scikit-learn.org/) for small-scale machine learning
-- [Statsmodels](http://www.statsmodels.org/stable/index.html) for classical
-statistics
+By this I mean non-deep learning approaches to ML (they're still useful!).
+Having a good grasp of basic ML methods (random forests, SVMs, etc.) is
+*mandatory* if you want to call yourself a data scientist.
+- If you're willing to use R, [An Introduction to Statistical
+Learning](http://www-bcf.usc.edu/~gareth/ISL/) is one of the fastest ways to
+get up and running with machine learning.
+- [Stanford CS 229](http://cs229.stanford.edu/) is Andrew Ng's famous
+introductory machine learning course. Videos from a previous semester should
+be available on YouTube. Use NumPy; MATLAB is the devil.
+- [The Elements of Statistical
+Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) is arguably the
+"bible" of standard machine learning methods.
+- Use [NumPy](http://www.numpy.org/) when trying to implement these algorithms
+for yourself to make sure you really understand them. Plots are helpful too.
+- [Scikit-learn](scikit-learn.org/) is how you will implement most of these
+methods in practice.
+- [Spark](https://spark.apache.org/) for large-scale standard ML.
 
-### Computationally Intensive Method Packages
-Includes packages for deep learning, as well as other methods that cause
-problems for base R and Python.
+#### Neural Networks/Deep Learning
+Computation-heavy, data-hungry methods that aim to automate the feature
+generation process before doing classification, regression, etc. Popular since
+around 2012. Notoriously difficult to interpret.
+- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)
+gives a good, clear introduction to deep learning basics. Includes building
+neural networks from the ground up using NumPy, then transitions to Theano
+(which is outdated; use something more modern).
+- The [Deep Learning book](http://www.deeplearningbook.org/) is indeed THE book
+on deep learning. This should bring you up to speed with the state of the art
+as of about early 2016. Biggest flaw: no exercises.
 - [TensorFlow](https://www.tensorflow.org/) for "low-level" neural network
 programming. Rarely use this directly.
 - [Keras](https://keras.io/) for higher-level programming. Lives on top of TF.
 Use this a ton.
-- [Edward](http://edwardlib.org/) for the Bayesians. Lives on top of TF. Plays
-nice with Keras.
-- [PyTorch](http://pytorch.org/) may be fun to play with. Unrelated to TF.
-- [Stan](http://mc-stan.org/) for Bayesian modeling. More mature and popular,
-but probably less powerful, than Edward.
-- [Spark](https://spark.apache.org/) for distributed, non-neural network machine
-learning.
+- [PyTorch](http://pytorch.org/) for a more friendly but less widely-used
+alternative to the TensorFlow stack.
+- [Horovod](https://github.com/uber/horovod) for distributed training.
+
+#### Probabilistic Machine Learning
+This includes methods where inference is primarily done by finding posterior
+distributions of latent variables rather than doing an optimization. Almost
+everything mentioned in the "Bayesian statistics" section above also
+applies here.
+- [Edward](http://edwardlib.org/) for inference with a TensorFlow backend.
+- [GPy](https://github.com/SheffieldML/GPy) when working with Gaussian
+processes.
+- [Pyro](http://pyro.ai/) is Edward but for PyTorch rather than TensorFlow.
 
 ### Books
-- [The Elements of Statistical
-Learning](https://web.stanford.edu/~hastie/ElemStatLearn/) is a good, though
-slightly dated book, about machine learning from the statistician's perspective.
-I think this book is important to read if you want to understand the motivation
-behind many of the most popular ML algorithms.
 - [Information Theory, Inference, and Learning
 Algorithms](http://www.inference.org.uk/mackay/itila/) is an interesting book
 that, as its name implies, explores the relationship between Information (and
