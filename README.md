@@ -30,6 +30,7 @@ ___
   - [Basics](#basics)
   - [Neural Networks and Deep Learning](#neural-networks-and-deep-learning)
 - [Other Resources](#other-resources)
+  - [Blogs](#blogs)
   - [News](#news)
   - [Podcasts](#podcasts)
 
@@ -267,6 +268,18 @@ Use this a ton.
 alternative to the TensorFlow stack.
 ___
 ## Other Resources
+### Blogs
+Company engineering blogs tell you about the research they're
+doing and the tools they're using. 
+- [Google Research Blog](https://research.googleblog.com/)
+- [Facebook Research Blog](https://research.fb.com/blog/)
+- [DeepMind Blog](https://deepmind.com/blog/)
+- [Uber Engineering Blog](https://eng.uber.com/)
+
+Many individuals out there also publish interesting material on their blogs,
+or on [Medium](https://medium.com/).
+
+
 ### News
 - [ArXiv](https://arxiv.org/) provides new papers every day, for free!
 - I didn't want to admit it at first, but [Twitter](https://twitter.com/)
