@@ -110,6 +110,8 @@ science work. Plays nice with GitHub.
 (free) might be the world's best introductory programming book.
 - [Friendly tutorial videos on YouTube](https://www.youtube.com/user/sentdex)
 to get started.
+- [The Awesome Python repo](https://github.com/vinta/awesome-python)
+for when you need to use Python for a task but don't know which packages are available.
 - [PyCon](https://www.youtube.com/channel/UCrJhliKNQ8g0qoE_zvL8eVg),
 [PyData](https://www.youtube.com/channel/UCOjD18EJYcsBog4IozkF_7w), and
 [SciPy](https://www.youtube.com/user/EnthoughtMedia/playlists) talks for more
