@@ -14,7 +14,7 @@ ___
   - [Other](#other)
 - [Databases](#databases)
 - [Data Visualization](#data-visualization)
-  - [Data Visulaization Software](#data-visualization-software)
+  - [Data Visualization Software](#data-visualization-software)
   - [Data Visualization Books and Links](#data-visualization-books-and-links)
 - [Math](#math)
   - [Calculus](#calculus)
@@ -34,13 +34,13 @@ ___
   - [News](#news)
   - [Podcasts](#podcasts)
 
-## Beginner Zone
 ___
+## Beginner Zone
 **Q:** What is data science?<br>
 **A:** Statistics in the 21st century.
 
 **Q:** What is machine learning?<br>
-**A:** Statisics as practiced by computer scientists.
+**A:** Statistics as practiced by computer scientists.
 
 **Q:** Where do I get started?<br>
 **A:** Learn to use the [command line](#command-line), then learn [R](#r) if
@@ -84,7 +84,7 @@ willing to write enough LISP (!) to make it happen. Emacs is 42 years old.
 - [Vim](https://www.vim.org/) is another ancient text editor for hardcore
 coders. Customized using another weird language: Vimscript.
 - [Sublime Text](https://www.sublimetext.com/) is a friendly Python-based
-editor designed for humans, but it isn't free :(  
+editor designed for humans, but it isn't free :(
 - [Atom](https://atom.io/) is relatively new and caters more to the Sublime
 crowd. Based on CoffeeScript, a variant of JavaScript
 - [VS Code](https://code.visualstudio.com/) is like Atom, but from Microsoft.
@@ -132,7 +132,7 @@ Python interface.
 - JavaScript is king for web-based data visualizations.
 ___
 ## Databases
-100% of people who manage databases are familar with
+100% of people who manage databases are familiar with
 [SQL](https://www.w3schools.com/sql/default.asp). Get some practice with
 SQL by using [SQLite](https://docs.python.org/3/library/sqlite3.html),
 which comes with Python.
@@ -272,7 +272,7 @@ ___
 ## Other Resources
 ### Blogs
 Company engineering blogs tell you about the research they're
-doing and the tools they're using. 
+doing and the tools they're using.
 - [Google Research Blog](https://research.googleblog.com/)
 - [Facebook Research Blog](https://research.fb.com/blog/)
 - [DeepMind Blog](https://deepmind.com/blog/)
